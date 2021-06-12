@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React from "react";
+import {Header} from "./components/Header/Header";
+import {ThemeProvider} from "@material-ui/core/styles";
+import { Button } from '@material-ui/core';
+import { Container } from '@material-ui/core';
+import {themes} from "./themes"
+import Bestsellers from './components/Bestsellers/Bestsellers';
+import {Title} from './components/Title';
+import { Cooperation } from './components/Cooperation';
+import { CooperationComponent } from './components/CooperationComponent';
+import ContactUs from "./components/ContactForm";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themes}>
+      <CooperationComponent />
+      <Container >
+      <Header/>
+
+      <Bestsellers />
+      <Cooperation />
+
+      <ContactUs/>
+      
+      </Container>
+
+      
+
+
+
+    </ThemeProvider>
+
   );
 }
 

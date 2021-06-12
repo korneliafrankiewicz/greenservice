@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+$main-font: 'Lato', sans-serif;
+
+
+* {
+
+  font-family: $main-font;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
