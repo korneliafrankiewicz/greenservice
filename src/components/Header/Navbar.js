@@ -119,7 +119,7 @@ const Navbar = () => {
                 </Button>
                
                 <Button className={classes.menuButton} color="secondary">
-              <a target="_blank" className={classes.menuLink} href="https://sklep.greenservice.pl/pl/"><FontAwesomeIcon className={classes.icon} icon={faShoppingCart}/>Sklep</a>
+              <a rel="noopener noreferrer" target="_blank" className={classes.menuLink} href="https://sklep.greenservice.pl/pl/"><FontAwesomeIcon className={classes.icon} icon={faShoppingCart}/>Sklep</a>
                 </Button>
                 
                 <Button className={classes.menuButton} color="secondary">

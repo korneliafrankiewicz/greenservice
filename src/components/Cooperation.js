@@ -77,35 +77,35 @@ export const Cooperation = () => {
 
             <div className={classes.categories}>
             <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/19-magazynowanie-i-transport">Magazynowanie i transport</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/19-magazynowanie-i-transport">Magazynowanie i transport</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/21-wyposazenie-zakladu">Wyposażenie zakładu</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/21-wyposazenie-zakladu">Wyposażenie zakładu</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/68-maty-sorbentowet">Maty sorbentowe</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/68-maty-sorbentowet">Maty sorbentowe</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/207-sorbenty">Sorbenty</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/207-sorbenty">Sorbenty</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/20-tamowanie">Tamowanie</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/20-tamowanie">Tamowanie</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/192-pojemniki-i-zbiorniki">Pojemniki i zbiorniki</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/192-pojemniki-i-zbiorniki">Pojemniki i zbiorniki</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/77-bezpieczenstwo">Bezpieczeństwo</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/77-bezpieczenstwo">Bezpieczeństwo</a>
               </Button>
 
               <Button className={classes.categoryLink} >
-             <a target="_blank" href="https://sklep.greenservice.pl/pl/38-higiena-i-dezynfekcja">Higiena i dezynfekcja</a>
+             <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/38-higiena-i-dezynfekcja">Higiena i dezynfekcja</a>
               </Button>
             </div>
         </Paper>
