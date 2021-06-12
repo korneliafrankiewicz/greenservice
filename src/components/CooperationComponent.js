@@ -5,7 +5,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ImageGS from '../images/greenservice_icon.png';
 import { Container, Typography, Paper, Card, Button, CardActions, CardContent } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHandsHelping, faHeart, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
