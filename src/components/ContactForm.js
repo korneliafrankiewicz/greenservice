@@ -32,7 +32,11 @@ const useStyles = makeStyles((theme) => ({
     inputs: {
         display: "flex",
         marginBottom: "20px",
-        justifyContent: "space-between"        
+        justifyContent: "space-between",
+        flexDirection: "column",
+        [theme.breakpoints.up('md')] : {
+          flexDirection: "row"
+      },        
     },
     input: {
         width: "250px"
@@ -41,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "30px"
     },
     contactHeader: {
+      display: "flex",
         marginBottom: "15px",
         color: "#616161"
     },

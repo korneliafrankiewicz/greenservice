@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
       '& > *': {
         margin: theme.spacing(1),
         width: "100%",
-        height: theme.spacing(50),
+      
       },
     },
     paperCard: {
@@ -20,13 +20,14 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
+      alignItems: "center",
+      margin: "0",
     },
     paperCardContent: {
       display: "flex",
       flexDirection: "column",
-   
       alignItems: "center",
-      height: "100%"
+
      
     },
     paperCardspan1: {
@@ -34,12 +35,28 @@ const useStyles = makeStyles((theme) => ({
     },
     categories: {
       display: "flex",
-      justifyContent: "space-between"
+      justifyContent: "center",
+      width: "100%",
+      flexWrap: "wrap",
+      [theme.breakpoints.up('md')] : {
+        justifyContent: "space-between",
+    },
     },
     categoryLink: {
       display: "flex",
-      width: "12%",
+      width: "30%",
+      height: "50px",
       backgroundColor: "#67b437",
+      margin: "5px",
+
+      [theme.breakpoints.up('sm')] : {
+        width: "30%",
+        margin: "5px",
+    },
+    [theme.breakpoints.up('lg')] : {
+      width: "12%",
+      margin: "0"
+  },
       "&:hover": {
         backgroundColor: "#9ae767",
     },
@@ -49,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
           color: "#373737;",
       },
+      },
+      cooperationFooter: {
+        display: "flex",
       }
     }
   }));
@@ -64,7 +84,8 @@ export const Cooperation = () => {
               <span className={classes.paperCardspan1}>
               Zajmujemy się kompleksowym zaopatrywaniem dystrybutorów z branży przemysłowej. 
               Skontaktuj się z nami w celu otrzymania indywidualnej oferty. Posiadamy konkurencyjne ofert i stale poszerzający się 
-              asortyment, na który udzielamy rabatów ilościowych. 
+              asortyment, na który udzielamy rabatów ilościowych.
+              Specjalizujemy się w imporcie produktów służących do ochrony środowiska pracy i dostarczaniu firmom zaopatrzenia przemysłu i utrzymania ruchu. Oferujemy  wysokiej jakości sorbenty polipropylenowe oraz naturalne, szeroką gamy wanien, kuwet i szaf polietylenowych, hydrozapór, ograniczników rozlewu, a także dekontaminacyjnych mat samoprzylepnych 
               </span>
               <span className={classes.paperCardspan}>
               Firma Green Service specjalizuje się w dostarczaniu na rynek krajowy artykułów służących do ochrony środowiska pracy. Głównym obszarem naszego zainteresowania są rozwiązania podnoszące bezpieczeństwo składowania, 
@@ -108,6 +129,8 @@ export const Cooperation = () => {
              <a rel="noopener noreferrer" target="_blank" href="https://sklep.greenservice.pl/pl/38-higiena-i-dezynfekcja">Higiena i dezynfekcja</a>
               </Button>
             </div>
+
+            <Typography  variant="h6" className={classes.cooperationFooter}>Zapraszamy również zakłady przemysłowe do bezpośredniego zaopatrywania się w sklepie oferując kompleksowy asortyment.</Typography>
         </Paper>
   
 

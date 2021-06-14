@@ -28,22 +28,19 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.1rem',
     },
   },
-  acount: {
-    marginLeft: 'auto',
-    '&:hover': {
-      background: 'purple',
-    },
-  },
+  // acount: {
+  //   marginLeft: 'auto',
+  //   '&:hover': {
+  //     background: 'purple',
+  //   },
+  // },
   tabsContainer: {
     marginLeft: 'auto',
+    display:"flex",
+    alignItems: "center"
   },
-  iconLogo: {
-    color: 'yellow',
-    fontSize: '3rem',
-  },
-  icons: {
-    fontSize: '1.4rem',
-  },
+
+
   imageLogo: {
     backgroundImage: `url(${Logo})`,
     backgroundSize: "cover",

@@ -48,7 +48,7 @@ export default function Product({component, image, alt, title, name, description
       </CardActionArea>
       <CardActions>
         <Button size="small" variant="contained" color="primary" className={classes.btn}>
-          Sprawdź w sklepie
+          Zapytaj o ofertę
         </Button>
       </CardActions>
     </Card>

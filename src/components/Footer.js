@@ -8,26 +8,37 @@ import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
     root:{
-        height: "70px",
+        height: "100px",
         width: "100%",
         position: "absolute",
         botom: "0",
+        [theme.breakpoints.up('lg')] : {
+            flexDirection: "row",
+            height: "70px",
+        },
     },
     footerContent: {
         display: "flex",
         width: "100%",
-        height: "50%",
         justifyContent: "space-around",
         alignItems: "center",
+        flexDirection: "column",
         backgroundColor: `${Color('#67b437').alpha(0.4).lighten(0.5)};`,
+        [theme.breakpoints.up('lg')] : {
+            flexDirection: "row",
+            height: "60%",
+        },
     },
     copyright: {
         backgroundColor: "#67b437",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "50%",
-        color: "white"
+        height: "30%",
+        color: "white",
+        [theme.breakpoints.up('lg')] : {
+            height: "50%",
+        },
     },
     footerItem: {
         color: "#373737",

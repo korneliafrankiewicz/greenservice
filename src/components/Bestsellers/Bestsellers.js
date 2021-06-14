@@ -7,7 +7,10 @@ import Image_little_trays from "../../images/kuwety_ociekowe.png";
 import Image_emergency_kits from "../../images/zestawy_ratunkowe.png";
 import Image_corksorb_greenOcean from "../../images/corksorb_greenocean.png";
 import Image_sorbent_mats from "../../images/maty_sorbentowe.png";
-import Image_sorbent_pillows_socks from "../../images/rekawy_poduszki.png"
+import Image_sorbent_pillows_socks from "../../images/rekawy_poduszki.png";
+import Image_cabinets_trolleys from "../../images/szafy_wozki.png";
+import Image_drain_covers from "../../images/ograniczniki_rozlewu.png";
+import Image_sticky_mats from "../../images/maty_sticky.png"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,8 +52,7 @@ export default function SimplePaper() {
           alt="Maty i rolki sorbentowe"
           title="Maty i rolki"
           name="Maty i rolki sorbentowe"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="Najwyższy standard jakości, bardzo chłonna włóknina polipropylenowa europejskiej i amerykańskiej produkcji. "
           />
       </Paper>
 
@@ -115,6 +117,41 @@ export default function SimplePaper() {
           />
       </Paper>
 
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_cabinets_trolleys}
+          alt="Szafki i wózki polietylenowe"
+          title="Szafki i wózki polietylenowe"
+          name="Szafki i wózki polietylenowe"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+          />
+      </Paper>
+
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_drain_covers}
+          alt="Osłony i ograniczniki rozlewu"
+          title="Osłony i ograniczniki rozlewu"
+          name="Osłony i ograniczniki rozlewu"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+          />
+      </Paper>
+
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_sticky_mats}
+          alt="Osłony i ograniczniki rozlewu"
+          title="Osłony i ograniczniki rozlewu"
+          name="Osłony i ograniczniki rozlewu"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+          />
+      </Paper>
 
 
 
