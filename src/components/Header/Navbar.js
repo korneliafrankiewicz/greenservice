@@ -5,8 +5,6 @@ import {
   makeStyles,
   Tabs,
   Toolbar,
-  Tab,
-  Typography,
   Button,
   Menu,
   MenuItem,

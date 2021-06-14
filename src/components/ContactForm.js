@@ -1,46 +1,53 @@
 import React from 'react';
 import emailjs from "emailjs-com";
 import {useForm} from "react-hook-form";
-
-import { Button, TextField} from "@material-ui/core";
+import { Button, TextField, Typography, Card, Paper} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import Color from 'color';
+import classNames from 'classnames';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        width: '50ch',
-        
-      },
+
+    contactFormWrapper: {
+      padding: "30px",
+      backgroundColor: `${Color('white').alpha(0.8).lighten(0.5)};`,
       display: "flex",
-      justifyContent: "center",
+      flexDirection: "column",
+      margin: "8px",
+      justifyContent: "center", 
       alignItems: "center",
-      marginBottom: "60px 0"
-    
+      margin: "80px 0"
     },
-    contact_form_wrapper: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        marginTop: "60px",
-        backgroundColor: "white"
+    contactFormContent:{
+      display: "flex",
+      width: "700px",
+      flexDirection: "column",
+      alignItems: "center"
+    },
+    form: {
+      width: "600px",
+      display: "flex",
+      justifyContent: "center"
     },
     inputs: {
         display: "flex",
-        flexDirection: "column",
-        marginRight: "60px"
-        
+        marginBottom: "20px",
+        justifyContent: "space-between"        
     },
     input: {
-        marginBottom: "20px"
+        width: "250px"
     },
-    message: {
-        display: "flex",
-        flexDirection: "column",
+    inutName: {
+      marginRight: "30px"
     },
-    contact_header: {
+    contactHeader: {
         marginBottom: "15px",
         color: "#616161"
+    },
+    submitButtonWrapper: {
+      display: "flex",
+      justifyContent: "flex-end",
+      marginTop: "10px"
     }
   }));
 
@@ -62,60 +69,49 @@ export default function ContactUs() {
   
     return (
 
-<div className={classes.contact_form_wrapper}>
-{/* <Typography variant="h3" className={classes.contact_header}>
+<Paper className={classes.contactFormWrapper} id="contactForm">
+  <div className={classes.contactFormContent}>
+  <Typography variant="h4"  className={classes.contactHeader}>
 <h3>Masz pytanie? Skontaktuj się z nami</h3>
 </Typography>
-
-<form onSubmit={sendEmail} className={classes.root} noValidate autoComplete="off">
-    <div className={classes.inputs}>
-    <TextField  className={classes.input} label="Imię i nazwisko" variant="outlined" name="name"/>
-    <TextField  className={classes.input} label="Nr.telefonu" variant="outlined" name="phone" />
-    <TextField  className={classes.input} label="E-mail" variant="outlined" name="email"/>
-    </div>
-    <div className={classes.message}>
-    <TextField
-            id="filled-multiline-static"
-            label="Zostaw wiadomość"
-            fullWidth="true"
-            multiline
-            rows="8"
-            margin="normal"
-            variant="filled"
-            name="message"
-            />
-            <Button type="submit" variant="contained">Wyślij</Button>
-    </div>
-</form> */}
-
 <form className={classes.form} noValidate autoComplete="off" onSubmit={onSubmit}>
                 <div>
                   <div className={classes.inputs}>
                   <TextField
                     id="standard-textarea"
                     color="primary"
-                    label="Wpisz swoje imię"
-                    placeholder="Wpisz swoje imię"
+                    label="Wpisz imię"
+                    placeholder="Wpis imię"
                     multiline
-                    className={classes.input}
+                    className={classNames(classes.input, classes.inutName)}
+            
+                  />
+
+                <TextField
+                    id="standard-textarea"
+                    color="primary"
+                    label="Wpisz numer telefonu"
+                    placeholder="Wpisz numer telefonu"
+                    multiline
+                    className={classNames(classes.input, classes.inutName)}
             
                   />
                   
                   <TextField
                     id="standard-textarea"
                     color="primary"
-                    label="Wpisz swój email"
+                    label="Wpisz email"
                     placeholder="Placeholder"
                     multiline
-               
-               
+                    className={classes.input}
+
                   />
                   </div>
                   <div className={classes.message}>
                   <TextField
                     id="standard-multiline-static"
                     color="primary"
-                    label="Wpisz swoją wiadomość"
+                    label="Wpisz wiadomość"
                     multiline
                     rows={6}
                     fullWidth
@@ -124,12 +120,14 @@ export default function ContactUs() {
                   </div>
 
                   <div className={classes.submitButtonWrapper}>
-                  <Button className={classes.submitButton} type="submit" variant="contained">Wyślij</Button>
+                  <Button className={classes.submitButton} color="primary" type="submit" variant="contained">Wyślij</Button>
                   </div>
+
                   </div>
                   </form>
-                       
-</div>
+
+  </div>        
+</Paper>
 
 
     );

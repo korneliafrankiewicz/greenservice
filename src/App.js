@@ -10,7 +10,7 @@ import {Title} from './components/Title';
 import { Cooperation } from './components/Cooperation';
 import { CooperationComponent } from './components/CooperationComponent';
 import ContactUs from "./components/ContactForm";
-
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <ContactUs/>
       
       </Container>
-
+      <Footer/ >
       
 
 
