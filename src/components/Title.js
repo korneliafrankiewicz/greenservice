@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
       fontSize: "1.6em"
-    }
+    },
+
   }));
 
 export const Title = () => {
@@ -51,8 +52,9 @@ export const Title = () => {
           <Typography gutterBottom variant="h4" component="h3" color="primary">Szukasz pewnego dostawcy? <br/>Zapraszamy do kontaktu</Typography>
           </CardContent>
           <CardActions className={classes.actionBtn}>
-          <Typography className={classes.headerDesc} variant="body2" color="textSecondary" component="p">
-            Specjalizujemy się w dostarczaniu na rynek krajowy artykułów służących do ochrony środowiska pracy.
+          <Typography className={classes.headerDesc} variant="body2" color="textSecondary">
+          Specjalizujemy się w dostarczaniu artykułów służących do ochrony środowiska pracy, zwłaszcza 
+         wysokiej jakości sorbentów, mat sorpcyjnych i wanien wychwytowych oraz różnego rodzaju wózków.
           </Typography>
           <Button className={classes.btn} size="large" color="primary" variant="contained"> <Link to="cooperation" smooth={true} duration={1000}><FontAwesomeIcon className={classes.icon} icon={faEnvelope}/></Link></Button>
           </CardActions>

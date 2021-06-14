@@ -14,11 +14,14 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHandsHelping, faHeart, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import Logo from "../../images/GS_logo.png";
-
 import DrawerComponent from './DrawerComponent';
+import Color from 'color';
 
 
 const useStyles = makeStyles(theme => ({
+  appbar: {
+
+  },
   logo: {
     fontSize: '1.9rem',
     [theme.breakpoints.down('md')]: {
@@ -90,7 +93,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar elevation={0} color='primary'>
+      <AppBar elevation={0} color='primary' className={classes.appbar}>
         <Toolbar>
       
           <div className={classes.imageLogo}></div>

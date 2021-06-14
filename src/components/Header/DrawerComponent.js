@@ -24,6 +24,9 @@ const DrawerComponent = () => {
     menuIconToggle: {
       fontSize: '3rem',
     },
+    menuLink: {
+      color: "#616161"
+    }
   }));
 
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -41,32 +44,38 @@ const DrawerComponent = () => {
         <List>
           <ListItem divider button  onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
-              <ListItemText><Link to="cooperation" smooth={true} duration={500}>Oferta współpracy</Link></ListItemText>
+              <ListItemText><Link className={classes.menuLink} to="cooperation" smooth={true} duration={500}>Oferta współpracy</Link></ListItemText>
               
             </ListItemIcon>
           </ListItem>
 
           <ListItem divider button onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
-              <ListItemText> <Link to="cooperation" smooth={true} duration={500}>Oferta współpracy</Link></ListItemText>
+              <ListItemText> <Link className={classes.menuLink} to="bestsellers" smooth={true} duration={500}>Bestsellery</Link></ListItemText>
             </ListItemIcon>
           </ListItem>
 
           <ListItem divider button onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
-              <ListItemText> Parents Account</ListItemText>
+              <ListItemText> 
+              <a rel="noopener noreferrer" target="_blank" className={classes.menuLink} href="https://sklep.greenservice.pl/pl/">Sklep</a>
+              </ListItemText>
             </ListItemIcon>
           </ListItem>
 
           <ListItem divider button onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
-              <ListItemText> Holidays</ListItemText>
+              <ListItemText>
+              <Link className={classes.menuLink}  to="cooperation" smooth={true} duration={1000}>Kontakt</Link>
+              </ListItemText>
             </ListItemIcon>
           </ListItem>
 
           <ListItem divider button onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
-              <ListItemText> Teachers Account</ListItemText>
+              <ListItemText> 
+              <Link className={classes.menuLink}  to="cooperation" smooth={true} duration={1000}>Więcej</Link>
+              </ListItemText>
             </ListItemIcon>
           </ListItem>
         </List>

@@ -101,7 +101,7 @@ export default function ContactUs() {
                     id="standard-textarea"
                     color="primary"
                     label="Wpisz email"
-                    placeholder="Placeholder"
+                    placeholder="Wpisz email"
                     multiline
                     className={classes.input}
 
