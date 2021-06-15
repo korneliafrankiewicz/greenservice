@@ -35,11 +35,12 @@ const Sorbents = () => {
         <div className={classes.root}>
             <Container>
             <div className={classes.contentWrapper}>
-            <Typography className={classes.title} variant="h2" >
+            <       Typography className={classes.title} variant="h2" >
                     Sorbenty polipropylenowe
                     </Typography> 
 
-                    </div>
+                    <div>Content</div>
+              </div>
             </Container>
                    
         </div>
