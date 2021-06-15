@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.up('md')] : {
             paddingTop: "30px",
-      
         },
      
     },
@@ -48,7 +47,11 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         textShadow: "1px 1px 5px #272b2e",
         textTransform: "uppercase",
-        fontSize: "bold",
+        fontSize: "2em",
+        [theme.breakpoints.up('md')] : {
+            fontSize: "3em",
+      
+        },
     },
     titleDescription: {
             display: "flex",
@@ -70,10 +73,13 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "0",
         textAlign: "left",
         
-  
       },
       action: {
         justifyContent: "space-between",
+        flexDirection: "column",
+        [theme.breakpoints.up('md')] : {
+            flexDirection: "row",
+        },
       },
       btn: {
         color: "white",

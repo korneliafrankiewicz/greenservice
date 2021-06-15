@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contactFormContent:{
       display: "flex",
-      width: "700px",
+      width: "80%",
       flexDirection: "column",
       alignItems: "center"
     },
@@ -34,20 +34,27 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "20px",
         justifyContent: "space-between",
         flexDirection: "column",
+        
         [theme.breakpoints.up('md')] : {
           flexDirection: "row"
       },        
     },
     input: {
-        width: "250px"
+        width: "250px",
+        marginBpttom: "15px",
     },
     inutName: {
       marginRight: "30px"
     },
     contactHeader: {
       display: "flex",
-        marginBottom: "15px",
-        color: "#616161"
+      marginBottom: "15px",
+      color: "#616161",
+      textAlign: "center",
+      fontSize: "1.4em",
+      [theme.breakpoints.up('sm')] : {
+        fontSize: "2em",
+    },
     },
     submitButtonWrapper: {
       display: "flex",
@@ -77,7 +84,7 @@ export default function ContactUs() {
 <Paper className={classes.contactFormWrapper} id="contactForm">
   <div className={classes.contactFormContent}>
   <Typography variant="h4"  className={classes.contactHeader}>
-<h3>Masz pytanie? Skontaktuj się z nami</h3>
+<h3>Masz pytanie? Skontaktuj się z nami!</h3>
 </Typography>
 <form className={classes.form} noValidate autoComplete="off" onSubmit={onSubmit}>
                 <div>
@@ -86,7 +93,7 @@ export default function ContactUs() {
                     id="standard-textarea"
                     color="primary"
                     label="Wpisz imię"
-                    placeholder="Wpis imię"
+                    placeholder="Wpisz imię"
                     multiline
                     className={classNames(classes.input, classes.inutName)}
             

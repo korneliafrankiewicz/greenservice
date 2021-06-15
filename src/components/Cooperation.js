@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     paperCardspan1: {
       fontWeight: "bold",
     },
+    paperCardspan: {
+     padding: "20px 0",
+    },
     categories: {
       display: "flex",
       justifyContent: "center",
@@ -44,14 +47,17 @@ const useStyles = makeStyles((theme) => ({
     },
     categoryLink: {
       display: "flex",
-      width: "30%",
+      width: "40%",
       height: "50px",
       backgroundColor: "#67b437",
       margin: "5px",
+      fontSize: "0.7em",
 
       [theme.breakpoints.up('sm')] : {
         width: "30%",
         margin: "5px",
+        padding: "2px 6px",
+        fontSize: "0.7em",
     },
     [theme.breakpoints.up('lg')] : {
       width: "12%",
@@ -69,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
       },
       cooperationFooter: {
         display: "flex",
+        paddingTop: "20px",
+
       }
     }
   }));

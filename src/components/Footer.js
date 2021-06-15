@@ -8,13 +8,16 @@ import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
     root:{
-        height: "100px",
         width: "100%",
         position: "absolute",
         botom: "0",
+        fontSize: "0.7em",
+      
         [theme.breakpoints.up('lg')] : {
             flexDirection: "row",
             height: "70px",
+            fontSize: "1em",
+            height: "100px",
         },
     },
     footerContent: {
@@ -36,14 +39,19 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         height: "30%",
         color: "white",
+        padding: "5px 0",
         [theme.breakpoints.up('lg')] : {
             height: "50%",
         },
     },
     footerItem: {
-        color: "#373737",
+        color: "black",
+        padding: "2px 0",
+        [theme.breakpoints.up('lg')] : {
+            padding: "0",
+        },
         "& a": {
-            color: "#373737",
+            color: "black",
           }
     },
     icon: {
