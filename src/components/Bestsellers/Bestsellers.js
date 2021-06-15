@@ -10,7 +10,14 @@ import Image_sorbent_mats from "../../images/maty_sorbentowe.png";
 import Image_sorbent_pillows_socks from "../../images/rekawy_poduszki.png";
 import Image_cabinets_trolleys from "../../images/szafy_wozki.png";
 import Image_drain_covers from "../../images/ograniczniki_rozlewu.png";
-import Image_sticky_mats from "../../images/maty_sticky.png"
+import Image_sticky_mats from "../../images/maty_sticky.png";
+import {
+  HashRouter,
+  Route,
+  Link,
+  Switch,
+  NavLink,
+} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {

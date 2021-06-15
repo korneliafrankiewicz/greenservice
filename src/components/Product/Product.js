@@ -7,6 +7,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {
+  Link,
+} from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,9 +51,12 @@ export default function Product({component, image, alt, title, name, description
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" variant="contained" color="primary" className={classes.btn}>
-          Zapytaj o ofertę
-        </Button>
+        {/* <Button size="small" variant="contained" color="primary" className={classes.btn}>
+          Więcej
+        </Button> */}
+        <Link to="/sorbenty" className={classes.btn}>
+                        <Button variant="contained" color="primary">Więcej...</Button>
+                        </Link>
       </CardActions>
     </Card>
   );

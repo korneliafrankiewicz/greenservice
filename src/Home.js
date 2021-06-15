@@ -11,31 +11,30 @@ import { Cooperation } from './components/Cooperation';
 import { CooperationComponent } from './components/CooperationComponent';
 import ContactUs from "./components/ContactForm";
 import Footer from "./components/Footer";
-import Home from "./Home";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
-import Sorbents from "./components/More/Sorbents"
 
 
 
-function App() {
+function Home() {
   return (
-    <HashRouter>
     <ThemeProvider theme={themes}>
-    <Switch>
-    <Route exact path="/" component={Home}/>
-    <Route exact path="/sorbenty" component={Sorbents}/>
+      <CooperationComponent />
+      <Container >
+      <Header/>
 
-    </Switch>
-    </ThemeProvider> 
-  </HashRouter>
+      <Bestsellers />
+      <Cooperation />
+
+      <ContactUs/>
+      
+      </Container>
+      <Footer/ >
+      
+
+
+
+    </ThemeProvider>
 
   );
 }
 
-export default App;
+export default Home;
