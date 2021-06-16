@@ -29,7 +29,7 @@ btn: {
 }));
 
 
-export default function Product({component, image, alt, title, name, description}) {
+export default function Product({component, image, alt, title, name, description, link}) {
   const classes = useStyles();
 
   return (
@@ -54,9 +54,10 @@ export default function Product({component, image, alt, title, name, description
         {/* <Button size="small" variant="contained" color="primary" className={classes.btn}>
           Więcej
         </Button> */}
-        <Link to="/sorbenty" className={classes.btn}>
-                        <Button variant="contained" color="primary">Więcej...</Button>
-                        </Link>
+        <Link rel="noopener noreferrer" target="_blank" to={link} className={classes.btn}>
+         <Button variant="contained" color="primary">Więcej...</Button>
+        </Link>
+
       </CardActions>
     </Card>
   );

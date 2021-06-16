@@ -9,7 +9,6 @@ import Color from 'color';
 const useStyles = makeStyles((theme) => ({
     root:{
         width: "100%",
-        position: "absolute",
         botom: "0",
         fontSize: "0.7em",
       

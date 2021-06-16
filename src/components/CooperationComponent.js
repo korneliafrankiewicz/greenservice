@@ -10,12 +10,12 @@ import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: "90px",
+        paddingTop: "90px",
         height: "100%",
     
         [theme.breakpoints.up('md')] : {
             height: "400px",
-            marginTop: "120px",
+            paddingTop: "120px",
         },
     
     },
@@ -97,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
     gsIcon: {
         display: "none",
         width: "400px",
+        height: "400px",
         backgroundImage: `url(${ImageGS})`,
         backgroundPosition: "center",
         backgroundSize: "cover",

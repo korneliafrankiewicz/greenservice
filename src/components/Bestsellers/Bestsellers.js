@@ -10,18 +10,15 @@ import Image_sorbent_mats from "../../images/maty_sorbentowe.png";
 import Image_sorbent_pillows_socks from "../../images/rekawy_poduszki.png";
 import Image_cabinets_trolleys from "../../images/szafy_wozki.png";
 import Image_drain_covers from "../../images/ograniczniki_rozlewu.png";
-import Image_sticky_mats from "../../images/maty_sticky.png";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  NavLink,
-} from 'react-router-dom';
+import Image_sticky_mats from "../../images/sticky.png";
+import Image_biomaster from "../../images/biomaster.png";
+import Image_flood_fence from "../../images/flood_fence.png";
+import Image_booms_berms from "../../images/booms_berms.png";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "60px",
+    paddingTop: "180px",
     marginBottom: "20px",
     display: 'flex',
     justifyContent: "space-around",
@@ -60,6 +57,7 @@ export default function SimplePaper() {
           title="Maty i rolki"
           name="Maty i rolki sorbentowe"
           description="Najwyższy standard jakości, bardzo chłonna włóknina polipropylenowa europejskiej i amerykańskiej produkcji. "
+          link="/sorbenty"
           />
       </Paper>
 
@@ -72,6 +70,7 @@ export default function SimplePaper() {
           name="Rękawy i poduszki sorpcyjne"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/rekawy-poduszki-sorpcyjne"
           />
       </Paper>
 
@@ -84,6 +83,7 @@ export default function SimplePaper() {
           name="Corksorb i GreenOcean"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/corksorb-greenocean"
           />
       </Paper>
 
@@ -96,6 +96,7 @@ export default function SimplePaper() {
           name="Wanny wychwytowe"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+           link="/wanny-wychwytowe"
           />
       </Paper>
 
@@ -109,7 +110,8 @@ export default function SimplePaper() {
           name="Kuwety ociekowe"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
-          />
+          link="/kuwety-ociekowe"
+         />
       </Paper>
 
       <Paper elevation={3} className={classes.paperCard}>
@@ -121,6 +123,7 @@ export default function SimplePaper() {
           name="Zestawy awaryjne"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/zestawy-awaryjne"
           />
       </Paper>
 
@@ -133,6 +136,7 @@ export default function SimplePaper() {
           name="Szafki i wózki polietylenowe"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/szafki-wozki-polietytlenowe"
           />
       </Paper>
 
@@ -145,6 +149,33 @@ export default function SimplePaper() {
           name="Osłony i ograniczniki rozlewu"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/oslony-studzienkowe-ograniczniki-rozlewu"
+          />
+      </Paper>
+
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_flood_fence}
+          alt="Zapory przeciwpowodziowe"
+          title="Zapory przeciwpowodziowe"
+          name="Zapory przeciwpowodziowe"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+          link="/zapory-przeciwpowodziowe"
+          />
+      </Paper>
+
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_booms_berms}
+          alt="Bariery wodne"
+          title="Bariery wodne"
+          name="Bariery wodne"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+           link="/bariery-wodne"
           />
       </Paper>
 
@@ -152,13 +183,28 @@ export default function SimplePaper() {
           <Product
           component="img"
           image={Image_sticky_mats}
-          alt="Osłony i ograniczniki rozlewu"
-          title="Osłony i ograniczniki rozlewu"
-          name="Osłony i ograniczniki rozlewu"
+          alt="Maty biobójcze sticky"
+          title="Maty biobójcze sticky"
+          name="Maty biobójcze sticky"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
+          link="/maty-sticky"
           />
       </Paper>
+
+      <Paper elevation={3} className={classes.paperCard}>
+          <Product
+          component="img"
+          image={Image_biomaster}
+          alt="Środki biobójcze"
+          title="Środki biobójcze"
+          name="Środki biobójcze"
+          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+           across all continents except Antarctica"
+          link="/srodki-biobojcze-biomaster"
+          />
+      </Paper>
+
 
 
 

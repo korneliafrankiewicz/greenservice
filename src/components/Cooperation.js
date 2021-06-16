@@ -57,11 +57,11 @@ const useStyles = makeStyles((theme) => ({
         width: "30%",
         margin: "5px",
         padding: "2px 6px",
-        fontSize: "0.7em",
     },
     [theme.breakpoints.up('lg')] : {
       width: "12%",
-      margin: "0"
+      margin: "0",
+      fontSize: "1em",
   },
       "&:hover": {
         backgroundColor: "#9ae767",
