@@ -8,6 +8,7 @@ import Bestsellers from './components/Bestsellers/Bestsellers';
 import { Cooperation } from './components/Cooperation';
 import { CooperationComponent } from './components/CooperationComponent';
 import ContactUs from "./components/ContactForm";
+import CompanyData from './components/CompanyData';
 import Footer from "./components/Footer";
 
 
@@ -24,7 +25,7 @@ function Home() {
       <Cooperation />
 
       <ContactUs/>
-      
+      <CompanyData />
       </Container>
       <Footer/ >
       

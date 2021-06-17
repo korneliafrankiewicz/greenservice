@@ -105,7 +105,8 @@ const Navbar = () => {
                 onChange={handleClickTab}
                 className={classes.tabsContainer}
                 indicatorColor='secondary'
-              //  value={value}
+               value={value}
+               TabIndicatorProps={{style: {backgroundColor: "transparent"}}}
               
                >
                 <Button className={classes.menuButton} color="secondary">

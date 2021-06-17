@@ -26,15 +26,26 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textShadow: "1px 1px 5px #272b2e",
     textTransform: "uppercase",
-    fontSize: "4em",
-    padding: "30px 0"
+    fontSize: "2em",
+    padding: "30px 0",
+    textAlign: "center",
+    [theme.breakpoints.up('md')] : {
+      fontSize: "4em",
+  },
 },
 imageWrapper: {
   backgroundImage: `url(${sorbents})`,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
-  height: "350px",
-  width: "100%"
+  height: "150px",
+  width: "100%",
+  [theme.breakpoints.up('sm')] : {
+    height: "200px",
+},
+  [theme.breakpoints.up('md')] : {
+    height: "350px",
+},
+  
 },
 paperCard: {
   padding: "20px",
@@ -68,7 +79,13 @@ categoryTypes: {
 categoryType: {
   display: "flex",
   marginBottom: "5px",
-  width: "15%",
+  width: "50%",
+  [theme.breakpoints.up('md')] : {
+    width: "30%"
+},
+[theme.breakpoints.up('lg')] : {
+  width: "15%"
+},
   "& a": {
     color: "white",
   },

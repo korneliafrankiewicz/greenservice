@@ -81,12 +81,12 @@ export default function ContactUs() {
   
     return (
 
-<Paper className={classes.contactFormWrapper} id="contactForm">
+<Paper className={classes.contactFormWrapper} id="contact">
   <div className={classes.contactFormContent}>
   <Typography variant="h4"  className={classes.contactHeader}>
 <h3>Masz pytanie? Skontaktuj się z nami!</h3>
 </Typography>
-<form className={classes.form} noValidate autoComplete="off" onSubmit={onSubmit}>
+<form className={classes.form} noValidate autoComplete="off" onSubmit={sendEmail}>
                 <div>
                   <div className={classes.inputs}>
                   <TextField
@@ -96,7 +96,7 @@ export default function ContactUs() {
                     placeholder="Wpisz imię"
                     multiline
                     className={classNames(classes.input, classes.inutName)}
-            
+                    name="name"
                   />
 
                 <TextField
@@ -106,7 +106,7 @@ export default function ContactUs() {
                     placeholder="Wpisz numer telefonu"
                     multiline
                     className={classNames(classes.input, classes.inutName)}
-            
+                    name="phone"
                   />
                   
                   <TextField
@@ -116,7 +116,7 @@ export default function ContactUs() {
                     placeholder="Wpisz email"
                     multiline
                     className={classes.input}
-
+                    name="email"
                   />
                   </div>
                   <div className={classes.message}>
@@ -127,7 +127,7 @@ export default function ContactUs() {
                     multiline
                     rows={6}
                     fullWidth
-           
+                    name="message"
                   />
                   </div>
 

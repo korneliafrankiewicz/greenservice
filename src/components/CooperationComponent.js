@@ -132,7 +132,7 @@ export const CooperationComponent = () => {
                         <Typography className={classes.headerDesc} variant="body2" color="secondary" component="p">
                             Specjalizujemy się w dostarczaniu artykułów służących do ochrony środowiska pracy, zwłaszcza wysokiej jakości sorbentów, mat sorpcyjnych i wanien wychwytowych oraz różnego rodzaju wózków.
                         </Typography>
-                        <Button className={classes.btn} size="large" color="primary" variant="contained"> <Link to="cooperation" smooth={true} duration={1000}><FontAwesomeIcon className={classes.icon} icon={faEnvelope}/></Link></Button>
+                        <Button className={classes.btn} size="large" color="primary" variant="contained"> <Link to="contact" smooth={true} duration={1000}><FontAwesomeIcon className={classes.icon} icon={faEnvelope}/></Link></Button>
                         </CardActions>
                     </Card>
                     </div>

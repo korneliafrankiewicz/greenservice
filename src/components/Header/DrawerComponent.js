@@ -10,7 +10,7 @@ import {
   Drawer,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ContactForm from "../ContactForm";
+
 
 
 const DrawerComponent = () => {
@@ -74,7 +74,7 @@ const DrawerComponent = () => {
           <ListItem divider button onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
               <ListItemText> 
-              <Link className={classes.menuLink}  to="cooperation" smooth={true} duration={1000}>Więcej</Link>
+              <Link className={classes.menuLink}  to="company_data" smooth={true} duration={1000}>Dane firmy</Link>
               </ListItemText>
             </ListItemIcon>
           </ListItem>
