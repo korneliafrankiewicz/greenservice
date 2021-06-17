@@ -19,7 +19,8 @@ import {
   Switch,
   NavLink,
 } from 'react-router-dom';
-import Sorbents from "./components/More/Sorbents"
+import Sorbents from "./components/More/Sorbents";
+import SocksPillows from './components/More/SocksPillows';
 
 
 
@@ -30,7 +31,7 @@ function App() {
     <Switch>
     <Route exact path="/" component={Home}/>
     <Route exact path="/sorbenty" component={Sorbents}/>
-
+    <Route exact path="/rekawy-poduszki-sorpcyjne" component={SocksPillows}/>
     </Switch>
     </ThemeProvider> 
   </HashRouter>
