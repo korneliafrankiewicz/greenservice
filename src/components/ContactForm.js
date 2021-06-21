@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import emailjs from "emailjs-com";
 import {useForm} from "react-hook-form";
 import { Button, TextField, Typography, Card, Paper} from "@material-ui/core";
@@ -27,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center"
     },
     form: {
-      width: "600px",
       display: "flex",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     inputs: {
         display: "flex",
@@ -61,24 +60,132 @@ const useStyles = makeStyles((theme) => ({
     submitButtonWrapper: {
       display: "flex",
       justifyContent: "flex-end",
-      marginTop: "10px"
+      marginTop: "10px",
+      marginBottom: "10px",
+    },
+    alerts: {
+      display: "flex"
+    },
+    alertMessage: {
+      display: "flex",
+   
     }
+
   }));
 
 export default function ContactUs() {
     const classes = useStyles();
-    const { control, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
-    function sendEmail(e) {
+
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [unValidName,setUnValidName]=useState(false);
+    const [unValidPhone,setUnValidPhone]=useState(false);
+    const [unValidEmail,setUnValidEmail]=useState(false);
+    const [unValidMess,setUnValidMess]=useState(false);
+    const [success,setSuccess]=useState(false);
+
+    const handleChangeName = (e) => {
+      setName(e.target.value)
+    };
+    const handleChangeEmail = (e) => {
+      setEmail(e.target.value)
+    };
+    const handleChangePhone = (e) => {
+      setPhone(e.target.value)
+    };
+    const handleChangeMessage = (e) => {
+      setMessage(e.target.value)
+    };
+
+    
+    useEffect(() => {
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("")
+    }, [success]);
+
+
+
+    const onSubmit  = (e) => {
       e.preventDefault();
+
+      setUnValidName(false);
+      setUnValidPhone(false);
+      setUnValidEmail(false);
+      setUnValidMess(false);
+
+      let inquiry = {
+        name : "",
+        phone: "",
+        email : "",
+        message: "",
+      };
+
+
+      function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase()) && email.length > 0;
+  
+    }
+
+    function validatePhone(phone) {
+      var regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+      return regex.test(phone)
+    }
+
+
+   
+    function validateName(name) {
+      return name.length > 4;
+  }
+
+      function validateMessage(message) {
+        return message.length >= 10;
+      }
+
+if(validateName(name)){
+  inquiry.name=name
+} else {
+  setUnValidName(true)
+  setSuccess(false)
+} 
+
+if(validatePhone(phone)){
+  inquiry.phone=phone
+} else {
+  setUnValidPhone(true)
+  setSuccess(false)
+} 
+
+if(validateEmail(email)){
+  inquiry.email=email
+} else {
+  setUnValidEmail(true)
+  setSuccess(false)
+}
+
+if(validateMessage(message)){
+  inquiry.message=message
+} else {
+  setUnValidMess(true)
+  setSuccess(false)
+}
   
       emailjs.sendForm('service_oj83ewr', 'template_iezzn9e', e.target, 'user_3JxDS70hRYCndFJ8j0eEN')
         .then((result) => {
             console.log(result.text);
-        }, (error) => {
+            // setSuccess(true)
+        }, 
+        (error) => {
             console.log(error.text);
         });
+        
         e.target.reset()
+        
     }
   
     return (
@@ -88,7 +195,9 @@ export default function ContactUs() {
   <Typography variant="h4"  className={classes.contactHeader}>
 <h3>Masz pytanie? Skontaktuj się z nami!</h3>
 </Typography>
-<form className={classes.form} noValidate autoComplete="off" onSubmit={sendEmail}>
+          
+
+<form className={classes.form} noValidate autoComplete="off" onSubmit={onSubmit}>
                 <div>
                   <div className={classes.inputs}>
                   <TextField
@@ -99,6 +208,8 @@ export default function ContactUs() {
                     multiline
                     className={classNames(classes.input, classes.inutName)}
                     name="name"
+                    value={name}
+                    onChange={handleChangeName}
                   />
 
                 <TextField
@@ -109,6 +220,8 @@ export default function ContactUs() {
                     multiline
                     className={classNames(classes.input, classes.inutName)}
                     name="phone"
+                    value={phone}
+                    onChange={handleChangePhone}
                   />
                   
                   <TextField
@@ -119,6 +232,8 @@ export default function ContactUs() {
                     multiline
                     className={classes.input}
                     name="email"
+                    value={email}
+                    onChange={handleChangeEmail}
                   />
                   </div>
                   <div className={classes.message}>
@@ -130,6 +245,8 @@ export default function ContactUs() {
                     rows={6}
                     fullWidth
                     name="message"
+                    value={message}
+                    onChange={handleChangeMessage}
                   />
                   </div>
 
@@ -137,8 +254,20 @@ export default function ContactUs() {
                   <Button className={classes.submitButton} color="primary" type="submit" variant="contained">Wyślij</Button>
                   </div>
 
+                <div className={classes.alerts}>
+                    {unValidName && <Alert className={classes.alertMessage} severity="error">Imię jest nieprawidłowe</Alert>}
+                      {unValidPhone && <Alert className={classes.alertMessage} severity="error">Podaj prawidłowy numer telefonu</Alert>}
+                      {unValidEmail && <Alert className={classes.alertMessage} severity="error">Podany email jest nieprawidłowy</Alert>}
+                      {unValidMess && <Alert className={classes.alertMessage} severity="error">Wiadomość jest za krótka</Alert>}
+                     
+                      { success && <Alert className={classes.alertMessage} severity="success">Wiadomość została wysłana. Wkrótce się skontaktujemy!</Alert>}
+        
+                </div>
+                 
+
+                     
                   </div>
-                  {/* <Alert severity="error">This is an error alert — check it out!</Alert> */}
+       
                   </form>
 
   </div>        
