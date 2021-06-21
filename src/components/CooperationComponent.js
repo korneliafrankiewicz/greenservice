@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {Link} from "react-scroll";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ImageGS from '../images/greenservice_icon.png';
-import { Container, Typography, Paper, Card, Button, CardActions, CardContent } from '@material-ui/core';
+import { Container, Typography, Card, Button, CardActions, CardContent } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import Color from 'color';
@@ -88,7 +88,17 @@ const useStyles = makeStyles((theme) => ({
       headerDesc: {
         paddingLeft: "15px",
         fontSize: "16px",
-        width: "90%"
+        width: "90%",
+        
+      },
+
+      title2: {
+        fontSize: "1.5em",
+        textAlign: "center",
+        [theme.breakpoints.up('md')] : {
+           fontSize: "2.25em",
+           textAlign: "left",
+        },
       },
       icon: {
         fontSize: "1.6em"
@@ -125,7 +135,7 @@ export const CooperationComponent = () => {
 
                     <Card color="secondary" className={classes.titleDescription}> 
                          <CardContent className={classes.cardContent}>
-                        <Typography gutterBottom variant="h4" color="secondary">Szukasz pewnego dostawcy? <br/>Zapraszamy do kontaktu</Typography>
+                        <Typography className={classes.title2} gutterBottom variant="h4" color="secondary">Szukasz pewnego dostawcy? <br/>Zapraszamy do kontaktu</Typography>
                         </CardContent>
 
                         <CardActions className={classes.action}>

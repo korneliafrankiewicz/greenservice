@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import emailjs from "emailjs-com";
-import {useForm} from "react-hook-form";
-import { Button, TextField, Typography, Card, Paper} from "@material-ui/core";
+import { Button, TextField, Typography, Paper} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Color from 'color';
 import classNames from 'classnames';
@@ -63,12 +62,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "10px",
       marginBottom: "10px",
     },
-    alerts: {
-      display: "flex"
-    },
+
     alertMessage: {
       display: "flex",
-   
+      marginBottom: "5px"
     }
 
   }));
@@ -133,14 +130,13 @@ export default function ContactUs() {
     }
 
     function validatePhone(phone) {
-      var regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-      return regex.test(phone)
+      return phone.length > 6;
     }
 
 
    
     function validateName(name) {
-      return name.length > 4;
+      return name.length > 3;
   }
 
       function validateMessage(message) {
@@ -175,16 +171,20 @@ if(validateMessage(message)){
   setSuccess(false)
 }
   
-      emailjs.sendForm('service_oj83ewr', 'template_iezzn9e', e.target, 'user_3JxDS70hRYCndFJ8j0eEN')
-        .then((result) => {
-            console.log(result.text);
-            // setSuccess(true)
-        }, 
-        (error) => {
-            console.log(error.text);
-        });
-        
-        e.target.reset()
+if(validateEmail(email) && validateName(name) && validatePhone(phone) && validateMessage(message)){
+  emailjs.sendForm('service_oj83ewr', 'template_iezzn9e', e.target, 'user_3JxDS70hRYCndFJ8j0eEN')
+  .then((result) => {
+    setSuccess(true)
+      console.log(result.text);
+   
+  }, 
+  (error) => {
+      console.log(error.text);
+  });
+  
+  e.target.reset()
+}
+
         
     }
   
@@ -258,8 +258,7 @@ if(validateMessage(message)){
                     {unValidName && <Alert className={classes.alertMessage} severity="error">Imię jest nieprawidłowe</Alert>}
                       {unValidPhone && <Alert className={classes.alertMessage} severity="error">Podaj prawidłowy numer telefonu</Alert>}
                       {unValidEmail && <Alert className={classes.alertMessage} severity="error">Podany email jest nieprawidłowy</Alert>}
-                      {unValidMess && <Alert className={classes.alertMessage} severity="error">Wiadomość jest za krótka</Alert>}
-                     
+                      {unValidMess && <Alert className={classes.alertMessage} severity="error">Wiadomość jest za krótka</Alert>}                    
                       { success && <Alert className={classes.alertMessage} severity="success">Wiadomość została wysłana. Wkrótce się skontaktujemy!</Alert>}
         
                 </div>

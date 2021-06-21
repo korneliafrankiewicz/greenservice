@@ -5,7 +5,7 @@ import BcgImage from "./images/pallets.jpg";
 import corksorbGreenOceanImg from "./images/corksorb-greenocean.png";
 import Color from 'color';
 import Footer from "../Footer"
-import { CommentRounded } from '@material-ui/icons';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

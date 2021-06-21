@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Cooperation = () => {
     const classes = useStyles();
-    const preventDefault = (event) => event.preventDefault();
+
 
     return (
       <div className={classes.root} id="cooperation">

@@ -15,7 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHandsHelping, faHeart, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import Logo from "../../images/GS_logo.png";
 import DrawerComponent from './DrawerComponent';
-import Color from 'color';
 
 
 const useStyles = makeStyles(theme => ({
@@ -28,12 +27,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.1rem',
     },
   },
-  // acount: {
-  //   marginLeft: 'auto',
-  //   '&:hover': {
-  //     background: 'purple',
-  //   },
-  // },
+
   tabsContainer: {
     marginLeft: 'auto',
     display:"flex",
@@ -81,9 +75,9 @@ const Navbar = () => {
     setValue(newValue);
   };
 
-  const handleOpenMenu = e => {
-    setAnchorEl(e.currentTarget);
-  };
+  // const handleOpenMenu = e => {
+  //   setAnchorEl(e.currentTarget);
+  // };
   const handleCloseMenu = () => {
     setAnchorEl(null);
   };

@@ -1,9 +1,8 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright, faHome, faEnvelope, faPhone, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons';
-import classNames from 'classnames';
 import Color from 'color';
 
 const useStyles = makeStyles((theme) => ({
