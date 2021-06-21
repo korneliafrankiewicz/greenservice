@@ -68,8 +68,7 @@ export default function SimplePaper() {
           alt="Rękawy i poduszki sorpcyjne"
           title="Rękawy i poduszki sorpcyjne"
           name="Rękawy i poduszki sorpcyjne"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="Niezastąpione przy punktowych i wzdłużnych wyciekach do podkladania np. podczas napraw maszyn. Wypełnione bardzo chłonną włókniną!"
           link="/rekawy-poduszki-sorpcyjne"
           />
       </Paper>
@@ -81,8 +80,7 @@ export default function SimplePaper() {
           alt="Corksorb i GreenOcean"
           title="Corksorb i GreenOcean"
           name="Corksorb i GreenOcean"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="Sorbent korkowy Corksorb (uniwersalny lub olejowy) i sorbent z wełny mineralnej Green Ocean - niezwykle lekkie i chłonne."
           link="/corksorb-greenocean"
           />
       </Paper>
@@ -94,8 +92,7 @@ export default function SimplePaper() {
           alt="Wanny wychwytowe"
           title="Wanny wychwytowe"
           name="Wanny wychwytowe"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="Wykonane z najwyższej jakości polietylenu odporne na kwasy, oleje i agresywne chemikalia. Różne wielkości i pojemności."
            link="/wanny-wychwytowe"
           />
       </Paper>
@@ -108,8 +105,7 @@ export default function SimplePaper() {
           alt="Kuwety ociekowe"
           title="Kuwety ociekowe"
           name="Kuwety ociekowe"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="w różnych rozmiarach, zarówno z kratownicami jak i bez do bezpiecznego przechowywania pojemników z substancjami niebezpiecznymi."
           link="/kuwety-ociekowe"
          />
       </Paper>
@@ -121,8 +117,7 @@ export default function SimplePaper() {
           alt="Zestawy awaryjne"
           title="Zestawy awaryjne"
           name="Zestawy awaryjne"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="w wersji uniwersalnej, olejowej i chemicznej (w koszach, szafkach, torbach, skrzynkach). Chłonności od 16l do 280l."
           link="/zestawy-awaryjne"
           />
       </Paper>
@@ -134,8 +129,7 @@ export default function SimplePaper() {
           alt="Szafki i wózki polietylenowe"
           title="Szafki i wózki polietylenowe"
           name="Szafki i wózki polietylenowe"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="Do transportu i przechowywania sorbentów oraz pojemników, kanistrów z kwasami, zasadami i innymi chemikaliami."
           link="/szafki-wozki"
           />
       </Paper>
@@ -147,8 +141,7 @@ export default function SimplePaper() {
           alt="Osłony i ograniczniki rozlewu"
           title="Osłony i ograniczniki rozlewu"
           name="Osłony i ograniczniki rozlewu"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="stanowią niezawodną barierę w powstrzymywaniu wycieków. Oferujemy osłony i ograniczniki różnych rozmiarów."
           link="/oslony-studzienkowe-ograniczniki-rozlewu"
           />
       </Paper>
@@ -160,8 +153,7 @@ export default function SimplePaper() {
           alt="Zapory przeciwpowodziowe"
           title="Zapory przeciwpowodziowe"
           name="Zapory przeciwpowodziowe"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="FloodFence to lekki i szybki w użyciu system kierowania wody, który bardzo szybko można zamontować. Nie wymaga balastu."
           link="/zapory-przeciwpowodziowe"
           />
       </Paper>
@@ -173,8 +165,7 @@ export default function SimplePaper() {
           alt="Bariery wodne"
           title="Bariery wodne"
           name="Bariery wodne"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="zatrzymują pływające zanieczyszczenia, oleje. Idealne do powstrzymywania rozprzestrzeniania się wycieków na powierzchni wód."
            link="/bariery-wodne"
           />
       </Paper>
@@ -186,8 +177,7 @@ export default function SimplePaper() {
           alt="Maty biobójcze sticky"
           title="Maty biobójcze sticky"
           name="Maty biobójcze sticky"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="do zapewnienia higieny w szczególnie chronionych obszarach przejścia takich jak: szpitale, przychodnie, domy opieki."
           link="/maty-sticky"
           />
       </Paper>
@@ -199,8 +189,7 @@ export default function SimplePaper() {
           alt="Środki biobójcze"
           title="Środki biobójcze"
           name="Środki biobójcze"
-          description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-           across all continents except Antarctica"
+          description="na bazie jonów srebra, w technologii Biomaster, to skuteczna ochrona przed wirusami, bakteriami i grzybami."
           link="/srodki-biobojcze-biomaster"
           />
       </Paper>
