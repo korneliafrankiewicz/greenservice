@@ -136,7 +136,7 @@ export default function SimplePaper() {
           name="Szafki i wózki polietylenowe"
           description="Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
            across all continents except Antarctica"
-          link="/szafki-wozki-polietytlenowe"
+          link="/szafki-wozki"
           />
       </Paper>
 

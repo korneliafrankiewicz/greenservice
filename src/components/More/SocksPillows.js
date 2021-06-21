@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Typography, Paper, Card, Button, CardActions, CardContent } from '@material-ui/core';
+import { Container, Typography, Paper,  Button} from '@material-ui/core';
 import SocksImage from "./images/socks2.jpg";
 import socks from "./images/socks.png"
 import Color from 'color';
@@ -45,7 +45,9 @@ imageWrapper: {
   backgroundImage: `url(${socks})`,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
-  height: "150px",
+  backgroundPosition: "center",
+  height: "100px",
+  marginBottom: "10px",
   width: "100%",
   [theme.breakpoints.up('sm')] : {
     height: "200px",

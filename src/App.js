@@ -1,27 +1,25 @@
 import './App.scss';
 import React from "react";
-import {Header} from "./components/Header/Header";
 import {ThemeProvider} from "@material-ui/core/styles";
-import { Button } from '@material-ui/core';
-import { Container } from '@material-ui/core';
 import {themes} from "./themes"
-import Bestsellers from './components/Bestsellers/Bestsellers';
-import {Title} from './components/Title';
-import { Cooperation } from './components/Cooperation';
-import { CooperationComponent } from './components/CooperationComponent';
-import ContactUs from "./components/ContactForm";
-import Footer from "./components/Footer";
 import Home from "./Home";
 import {
   HashRouter,
   Route,
-  Link,
   Switch,
-  NavLink,
 } from 'react-router-dom';
 import Sorbents from "./components/More/Sorbents";
 import SocksPillows from './components/More/SocksPillows';
-
+import CorksorbGreenOcean from './components/More/CorksorbGreenOcean';
+import Pallets from "./components/More/Pallets";
+import Trays from './components/More/Trays';
+import SpillKits from './components/More/SpillKits';
+import Cabinets from './components/More/Cabinets';
+import DrainCovers from './components/More/DrainCovers';
+import FloodFence from './components/More/FloodFence';
+import WaterBarriers from './components/More/WaterBarriers';
+import Biomaster from "./components/More/Biomaster";
+import StickyMats from './components/More/StickyMats';
 
 
 function App() {
@@ -32,6 +30,16 @@ function App() {
     <Route exact path="/" component={Home}/>
     <Route exact path="/sorbenty" component={Sorbents}/>
     <Route exact path="/rekawy-poduszki-sorpcyjne" component={SocksPillows}/>
+    <Route exact path="/corksorb-greenocean" component={CorksorbGreenOcean}/>
+    <Route exact path="/wanny-wychwytowe" component={Pallets}/>
+    <Route exact path="/kuwety-ociekowe" component={Trays}/>
+    <Route exact path="/zestawy-awaryjne" component={SpillKits}/>
+    <Route exact path="/szafki-wozki" component={Cabinets}/>
+    <Route exact path="/oslony-studzienkowe-ograniczniki-rozlewu" component={DrainCovers}/>
+    <Route exact path="/zapory-przeciwpowodziowe" component={FloodFence}/>
+    <Route exact path="/bariery-wodne" component={WaterBarriers}/>
+    <Route exact path="/srodki-biobojcze-biomaster" component={Biomaster}/>
+    <Route exact path="/maty-sticky" component={StickyMats}/>
     </Switch>
     </ThemeProvider> 
   </HashRouter>

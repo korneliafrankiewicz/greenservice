@@ -67,12 +67,12 @@ const Footer = () => {
                 
                 <div className={classes.footerItem}>
                 <FontAwesomeIcon className={classes.icon} icon={faPhone}/>
-                +48 71 715 7788
+                +48 (71) 716 02 00
                 </div>
 
                 <div className={classes.footerItem}>
                 <FontAwesomeIcon className={classes.icon} icon={faEnvelope}/>
-                sklep@greenservice.pl
+                biuro@greenservice.pl
                 </div>
 
 

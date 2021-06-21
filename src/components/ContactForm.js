@@ -5,6 +5,8 @@ import { Button, TextField, Typography, Card, Paper} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Color from 'color';
 import classNames from 'classnames';
+import Alert from '@material-ui/lab/Alert';
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -136,6 +138,7 @@ export default function ContactUs() {
                   </div>
 
                   </div>
+                  {/* <Alert severity="error">This is an error alert — check it out!</Alert> */}
                   </form>
 
   </div>        
