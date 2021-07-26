@@ -1,10 +1,17 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Container, Typography, Paper,  Button } from '@material-ui/core';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 import SorbentsImage from "./images/sorbentBcg.JPG";
 import sorbents from "./images/sorbenty.png";
 import Color from 'color';
-import Footer from "../Footer"
+import Footer from "../Footer";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -100,6 +107,37 @@ space: {
 
     
   }));
+
+  const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: "#67b437",
+      color: theme.palette.common.white,
+      textTransform: "uppercase"
+    },
+    body: {
+      fontSize: 14,
+    },
+  }))(TableCell);
+  
+  const StyledTableRow = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }))(TableRow);
+  
+  function createData(name, calories, fat, carbs, protein, cos) {
+    return { name, calories, fat, carbs, protein, cos };
+  }
+  
+  const rows = [
+    createData('GDM200', 159, 6.0, 24, 4.0, 9),
+    createData('GDML100', 237, 9.0, 37, 4.3, 9),
+    createData('GDM100', 262, 16.0, 24, 6.0, 9),
+    createData('GFMFL100', 305, 3.7, 67, 4.3, 9),
+    createData('Gingerbread', 356, 16.0, 49, 3.9, 9),
+  ];
 
 
 const Sorbents = () => {
@@ -222,6 +260,38 @@ const Sorbents = () => {
               </Paper>
 
               <div className={classes.space}></div>
+              
+              <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>Model</StyledTableCell>
+            <StyledTableCell align="right">Kolor&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Wymiar&nbsp;(cmxcm)</StyledTableCell>
+            <StyledTableCell align="right">Ilość sztuk&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Gramatura&nbsp;(g/m2)</StyledTableCell>
+            <StyledTableCell align="right">Chłonność&nbsp;(l)</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">
+                {row.name}
+              </StyledTableCell>
+              <StyledTableCell align="right">{row.calories}</StyledTableCell>
+              <StyledTableCell align="right">{row.fat}</StyledTableCell>
+              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">{row.cos}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+              <div className={classes.space}></div>
+
 
             </Container>
 

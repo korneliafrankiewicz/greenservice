@@ -18,7 +18,7 @@ import Image_booms_berms from "../../images/booms_berms.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "180px",
+    paddingTop: "50px",
     marginBottom: "20px",
     display: 'flex',
     justifyContent: "space-around",
@@ -28,9 +28,10 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')] : {
       justifyContent: "space-between",
+      paddingTop: "120px",
   },
   [theme.breakpoints.up('md')] : {
-
+    paddingTop: "180px",
 },
   },
   paperCard: {
